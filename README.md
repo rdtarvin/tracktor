@@ -100,12 +100,12 @@ _*Jupyter notebook_ is optional. However, it is highly recommended for interacti
 
 Once all of these packages are installed, create a ‘kernel’ for your virtual environment, which will be necessary for running Tracktor in Jupyter Notebook. Run the following and replace “myenv” with the name you gave your virtual environnement.
 
-`m -python ipykernel install --user --name myenv --display-name "python (myenv)”`
+`python -m ipykernel install --user --name myenv --display-name "python (myenv)”`
 
 ### d. Install OpenCV
 [OpenCV](https://en.wikipedia.org/wiki/OpenCV) (Open Source Computer Vision) is a library of programming functions focused on real-time computer vision. OpenCV is freeware that works across all platforms but installing it on your computer might be the trickiest part of getting Tracktor to run on your machine. Fortunately miniconda allows installing  OpenCV easily. Run:
 
-`conda install -c menpo opencv3`
+`conda install -c menpo opencv3 python=3`
 
 or (if this doesn’t work):
 
@@ -114,6 +114,7 @@ or (if this doesn’t work):
 If you do not get an error message, OpenCV is now installed in your virtual environment. You can check if the installation worked by typing:
 
 `python`
+
 `import cv2`
 
 If these two lines give no error: congratulations, the installation was successful! You can exit Python for now using the `exit()` command. Note: you entered python by typing ‘python’ above. ‘import cv2’ is used to check if OpenCV works correctly. Once this is done, you need to exit python (with the “exit()” command) to go back to using the normal terminal commands.
